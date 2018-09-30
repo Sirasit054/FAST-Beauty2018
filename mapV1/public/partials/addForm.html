@@ -1,0 +1,85 @@
+<!-- "Join Team" (Post) Form -->
+<div class="col-md-12">
+
+    <!-- Creates Main Panel -->
+    <div class="panel panel-default">
+
+        <!-- Panel Title -->
+        <div class="panel-heading">
+            <h2 class="panel-title text-center">กรุณากรอกรายละเอียดร้าน<span class="glyphicon glyphicon-map-marker"></span></h2>
+        </div>
+
+        <!-- Panel Body -->
+        <div class="panel-body">
+
+            <div class="col-md-7"> <!-- Creates Form (novalidate disables HTML validation, Angular will control) -->
+            <form name ="addForm" novalidate>
+
+                <!-- Text Boxes and Other User Inputs. Note ng-model binds the values to Angular $scope -->
+                <div class="form-group">
+                    <label for="beautyname">ชื่อร้าน <span class="badge">All fields required</span></label>
+                    <input type="text" class="form-control" id="beautyname" placeholder="ระบุชื่อร้าน" ng-model="formData.beautyname" required>
+                    
+                </div>
+                <div class="form-group">
+                    <label for="username">ชื่อเจ้าของร้าน</label>
+                    <input type="text" class="form-control" id="username" placeholder="ระบุชื่อเจ้าของร้าน" ng-model="formData.username" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">เบอร์โทรติดต่อ </label>
+                    <input type="text" class="form-control" id="phone" placeholder="ระบุเบอร์โทร" ng-model="formData.phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">อีเมล์ </label>
+                    <input type="text" class="form-control" id="email" placeholder="ระบุอีเมล์" ng-model="formData.email" required>
+                </div>
+                <div class="form-group">
+                    <label for="day">วันที่เปิด</label>
+                    <input type="text" class="form-control" id="day" placeholder="ระบุวันที่เปิด เช่น จ-ส 09.00-18.00" ng-model="formData.day" required>
+                </div>
+                <label class="radio control-label">ประเภทร้านเสริมสวย</label>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="radiomale" value="ร้านสำหรับตัดผม" ng-model="formData.gender">
+                        ร้านสำหรับตัดผม
+                    </label>
+                </div>
+                <div class="radio" required>
+                    <label>
+                        <input type="radio" name="optionsRadios" id="radiofemale" value="ร้านสำหรับแต่งหน้า" ng-model="formData.gender">
+                        ร้านสำหรับแต่งหน้า
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="radioother" value="ร้านสำหรับทำเล็บ" ng-model="formData.gender">
+                        ร้านสำหรับทำเล็บ
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="beautycian">ชื่อช่างเสริมสวย </label>
+                    <input type="text" class="form-control" id="beautycian" placeholder="ระบุชื่อช่างเสริมสวย" ng-model="formData.beautycian" required>
+                </div>
+                
+                
+                <div class="form-group">
+                    <label for="latitude">Latitude</label>
+                    <input type="text" class="form-control" id="latitude" value="39.500" ng-model="formData.latitude" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="longitude">Longitude</label>
+                    <input type="text" class="form-control" id="longitude" value="-98.350" ng-model="formData.longitude" readonly>
+                </div>
+                <div class="form-group">
+                    <!-- Note RefreshLoc button tied to addCtrl. This requests a refresh of the HTML5 verified location. -->
+                    <label for="verified">HTML5 Verified Location? <span><button ng-click="refreshLoc()" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-refresh"></span></button></span></label>
+                    <input type="text" class="form-control" id="verified" placeholder= "Nope (Thanks for spamming my map...)" ng-model="formData.htmlverified" readonly>
+                </div>
+
+                <!-- Submit button. Note that its tied to createUser() function from addCtrl. Also note ng-disabled logic which prevents early submits.  -->
+                <button type="submit" class="btn btn-danger btn-block" ng-click="createUser()" ng-disabled="addForm.$invalid">เพิ่มร้านเสริมสวย</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

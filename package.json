@@ -1,0 +1,33 @@
+{
+  "name": "thsms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "alert-node": "^0.2.1",
+    "body-parser": "^1.18.1",
+    "dialog": "^0.3.1",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "express-session": "^1.15.5",
+    "express-validator": "^4.2.0",
+    "fs": "0.0.1-security",
+    "fs-extra": "^6.0.0",
+    "hbs": "^4.0.1",
+    "intellisms": "^0.1.2",
+    "jsonwebtoken": "^5.0.2",
+    "method-override": "~2.1.2",
+    "mongodb": "^2.2.31",
+    "mongoose": "^4.11.12",
+    "morgan": "~1.2.2",
+    "multer": "^1.3.0",
+    "request": "^2.83.0",
+    "xls-to-json-lc": "^0.3.4",
+    "xlsx-to-json-lc": "^0.5.0"
+  }
+}

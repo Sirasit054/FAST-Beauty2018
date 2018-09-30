@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Hair salon templates for mens hair cut service provider.">
+    <meta name="keywords" content="hair salon website templates free download, html5 template, free responsive website templates, website layout,html5 website templates, template for website design, beauty HTML5 templates, cosmetics website templates free download">
+    <title>Fast Beauty|Easy my life</title>
+    <link rel="icon" href="img/icon_hospital.png">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7cMontserrat:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- Style -->
+    <link href="css/style.css" rel="stylesheet"> {{!--
+    <script>
+        function confirmSendSMS() {
+            alert("Are you sure to send a message?");
+        }
+    </script> --}}
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <a href="/"><img src="images/1.png" alt="Hair Salon Website Templates Free Download"></a>
+                </div>
+                <div class="col-lg-8 col-md-4 col-sm-12 col-xs-12">
+                    <div class="navigation">
+                        <div id="navigation">
+                            <ul>
+                                <li class="active">
+                                    <a href="http://localhost:3002/#/join" title="Home">
+                                        <h4>เปิดร้านเสริมสวย</h4>
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a href="/get-beauty" title="Home">
+                                        <h4> ร้านของฉัน</h4>
+                                    </a>
+                                </li>
+
+                                <li class="active">
+                                    <a href="/get-book" title="Home">
+                                        <h4>เเจ้งเตือนการจอง</h4>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="/get-post1" title="Features">
+                                        <h4>กระดานรีวิว</h4>
+                                    </a>
+                                    <ul>
+                                        <li class="active">
+                                            <a href="/get-mypost1" id="search" title="Home">
+                                                <h4>โพสของฉัน</h4>
+                                            </a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="/newpost1" title="Home">
+                                                <h4>เพิ่มโพสของฉัน</h4>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="#" title="Features">
+                                        <h4>ผู้ใช้งาน</h4>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <a href="testimonial.html" title="Service List">
+                                                <h4>เปลี่ยนรหัสผ่าน</h4>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/loginEm" title="Service Detail">
+                                                <h4>ออกจากระบบ</h4>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+
+
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{# each items }}
+    <div class="container">
+        <br><br>
+        <div class="card">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="post-block">
+                    <div class="card-header">
+               
+                <form action="/update/{{ this._id }}" method="post" enctype="multipart/form-data">
+                    <div class="card-body">
+                        <div class="col-md-12">
+                            <div class="post-img">
+                                <a href="#"><img src="uploads/{{ this.pic }}" alt="" class="img-responsive"></a>
+                            </div><br><br>
+                        </div>
+                        <div class="space-small"><h2> ข้อมูลร้านของฉัน</h2></div>
+                          <div class="form-row"> 
+                        <div class="col-sm-6">
+                            
+                            <h3>กรุณาเลือกรูปโปร์ไฟล์ร้าน</h3><input type="file" name="file">
+
+                        </div>
+                      
+                            <div class="col-md-6">
+                                
+                                <h3> ชื่อร้าน</h3>
+                                <input type="text" class="form-control" id="beautyname" name="beautyname" value="{{ this.beautyname }}"readonly>
+                            </div>
+                            <div class="col-md-6">
+                                <h3> ชื่อเจ้าของร้าน</h3>
+                                <input type="text" class="form-control" id="username" name="username" value="{{ this.username }} "readonly>
+                            </div>
+                            <div class="col-md-6">
+                                <h3> เบอร์โทรร้าน</h3>
+                                <input type="text" class="form-control" id="phone" name="phone" value="{{ this.phone }} "readonly>
+                            </div>
+                            <div class="col-md-6">
+                                <h3> อีเมล์ร้าน</h3>
+                                <input type="text" class="form-control" id="email" name="email" value="{{ this.email }} "readonly>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3> ลักษณะการใช้บริการ</h3>
+                            <input type="text" class="form-control" id="gender" name="gender" value="{{ this.gender}} "readonly>
+                        </div>
+
+                        <div class="col-md-6">
+                            <h3> วันที่เปิดร้าน</h3>
+                            <input type="text" class="form-control" id="day" name="day" value="{{ this.day }} "readonly>
+                        </div>
+                        <div class="col-md-6">
+                            <h3> ชื่อช่าง</h3>
+                            <input type="text" class="form-control" id="beautycian" name="beautycian" value="{{ this.beautycian }} "readonly>
+                        </div>
+                         <div class="col-md-12">
+                            <h3> ตำเเหน่งร้าน</h3>
+                            <input type="text" class="form-control" id="location" name="location" value="{{ this.location }} "readonly>
+                     
+                         </div>
+
+                    
+                        <div class="space-small"><h2> ราคาการบริการ</h2></div>
+                    
+                        <div class="col-sm-4">
+                                <h3> ลักษณะการใช้บริการ</h3>
+                                 <input type="text" class="form-control" id="type" name="type" value="ตัดผม">
+                                              
+                            </div>
+                                <div class="col-md-4">
+                                    <h3> ราคาต่ำสุด</h3>
+                                    <input type="text" class="form-control" id="min" name="min" value="{{ this.min }}">
+                                </div>
+                                <div class="col-md-4">
+                                    <h3> ราคาสูงสุด</h3>
+                                    <input type="text" class="form-control" id="max" name="max" value="{{ this.max }}" >
+                                </div>
+                              
+                               <div class="col-md-4">
+                             
+                                 <input type="text" class="form-control" id="type1" name="type1" value="ทำเล็บ">
+                                              
+                            </div>
+                                <div class="col-md-4">
+                         
+                                    <input type="text" class="form-control" id="min1" name="min1" value="{{ this.min1 }}">
+                                </div>
+                                <div class="col-md-4">
+                                
+                                    <input type="text" class="form-control" id="max1" name="max1" value="{{ this.max1 }}" >
+                                </div>
+
+                                <div class="col-md-4">
+                             
+                                 <input type="text" class="form-control" id="type2" name="type2" value="ดัด ยืดผม">
+                                              
+                            </div>
+                                <div class="col-md-4">
+                                 
+                                    <input e="text" class="form-control" id="min2" name="min2" value="{{ this.min2 }}">
+                                </div>
+                                <div class="col-md-4">
+                                 
+                                    <input type="text" class="form-control" id="max2" name="max2" value="{{ this.max2 }}" >
+                                </div>
+                                 
+                                <div class="col-md-4">
+                             
+                                 <input type="text" class="form-control" id="type3" name="type3" value="สระ ไดร์ผม">
+                                              
+                            </div>
+                              <div class="col-md-4">
+                                 
+                                    <input e="text" class="form-control" id="min3" name="min3" value="{{ this.min3 }}">
+                                </div>
+                                <div class="col-md-4">
+                                 
+                                    <input type="text" class="form-control" id="max3" name="max3" value="{{ this.max3 }}" >
+                                </div>
+                                 
+                            <div class="col-md-4">
+                             
+                                 <input type="text" class="form-control" id="type4" name="type4" value="ทำสีผม">
+                                              
+                            </div>
+                              <div class="col-md-4">
+                                 
+                                    <input e="text" class="form-control" id="min4" name="min4" value="{{ this.min4 }}">
+                                </div>
+                                <div class="col-md-4">
+                                 
+                                    <input type="text" class="form-control" id="max4" name="max4" value="{{ this.max4 }}" >
+                                </div>
+                                 
+
+
+
+
+                            
+
+
+                            <div align="center">
+                                <input type="submit" class="btn btn-primary" value="อัพเดทข้อมูลร้าน">
+                            </div>
+                            <br>
+
+
+                </form>
+                </div>
+
+
+                </div>
+            </div>
+        </div> 
+    </div>
+        </div> 
+
+    </div>{{/each}}
+
+
+    <div class="footer">
+        <!-- footer-->
+        <div class="container">
+            <div class="footer-block">
+                <!-- footer block -->
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="footer-widget">
+                            <h2 class="widget-title">Website Address</h2>
+                            <ul class="listnone contact">
+                                <li><i class="fa fa-map-marker"></i> Software Engineering, Prince of Songkhla University, Phuket
+                                    campus
+                                </li>
+                                <li><i class="fa fa-phone"></i> +66 987 383 640</li>
+                                <li><i class="fa fa-fax"></i> +66 987 383 640</li>
+                                <li><i class="fa fa-envelope-o"></i> benzsirasit1203@hotmail.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="footer-widget footer-social">
+                            <!-- social block -->
+                            <h2 class="widget-title">Social Feed</h2>
+                            <ul class="listnone">
+                                <li>
+                                    <a href="#"> <i class="fa fa-facebook"></i> Facebook </a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i> Google Plus</a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i> Linked In</a></li>
+                                <li>
+                                    <a href="#"> <i class="fa fa-youtube"></i>Youtube</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.social block -->
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                        <div class="footer-widget widget-newsletter">
+                            <!-- newsletter block -->
+                            <h2 class="widget-title">Newsletters</h2>
+                            <p>Enter your email address to receive new patient information and other useful information right
+                                to your inbox.</p>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Email Address">
+                                <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Subscribe</button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </div>
+                        <!-- newsletter block -->
+                    </div>
+                </div>
+                <div class="tiny-footer">
+                    <!-- tiny footer block -->
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="copyright-content">
+                                <p>© Fast beauty 2020 | all rights reserved</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.tiny footer block -->
+            </div>
+            <!-- /.footer block -->
+        </div>
+    </div>
+    <!-- /.footer-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menumaker.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/sticky-header.js"></script>
+</body>
+
+</html>

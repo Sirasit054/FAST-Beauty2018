@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Hair salon templates for mens hair cut service provider.">
+    <meta name="keywords" content="hair salon website templates free download, html5 template, free responsive website templates, website layout,html5 website templates, template for website design, beauty HTML5 templates, cosmetics website templates free download">
+    <title>Fast Beauty|Easy my life</title>
+    <link rel="icon" href="img/icon_hospital.png">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i%7cMontserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <!-- Style -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    {{!-- <script>
+    function confirmSendSMS(){
+        alert("Are you sure to send a message?");
+    }
+  </script> --}}
+</head>
+<body>
+   
+        <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <a href="/"><img src="images/1.png" alt="Hair Salon Website Templates Free Download"></a>
+                </div>
+                <div class="col-lg-8 col-md-4 col-sm-12 col-xs-12">
+                    <div class="navigation">
+                        <div id="navigation">
+                            <ul>
+                             
+                                            <li class="active"><a href="indexfind" title="Home"><h4>หน้าแรก</h4></a></li>
+                                            <li class="active"><a href="/get-data" title="Home"><h4>ร้านเสริมสวยทั้งหมด</h4></a></li>
+          
+          
+          
+                                          <li><a href="http://localhost:3002/#/find" title="Features"><h4>ค้นหาด้วยแผนที่</h4></a>
+          
+                                        <li><a href="/get-post" title="Features"><h4>กระดานรีวิว</h4></a>
+                                                <ul>
+                                        <li class="active"><a href="/mypost" id="search" title="Home"><h4>โพสของฉัน</h4></a></li>
+                                          <li class="active"><a href="/newpost" title="Home"><h4>เพิ่มโพสของฉัน</h4></a></li>
+                                        </ul>
+                                    </li>
+        
+                                               
+                                                <li><a href="#" title="Features"><h4>ผู้ใช้งาน</h4></a>
+                                                    <ul>
+                                                        <li><a href="testimonial.html" title="Service List"><h4>เปลี่ยนรหัสผ่าน</h4></a></li>
+                                                        <li><a href="/login" title="Service Detail"><h4>ออกจากระบบ</h4></a></li>
+                                                    </ul>
+                                                </li>
+                                        
+                               
+                               
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="container">
+        <br><br>{{# each items }} 
+        <div class="card">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="post-block">
+        <div class="card-header">
+            <h3> การจองคิวร้านเสริมสวย</h3>
+        </div> 
+        <div class="card-body">
+          
+            <form action="/sendsms" method="post" onsubmit="return confirm('Do you really want to send a message?');">
+               <div class="form-row">
+                    <div class="col-md-6">
+                         <h3> ชื่อร้าน</h3>
+                        <input type="text" class="form-control" id="beautyname" name="beautyname" value="{{ this.beautyname }}" readonly>
+                    </div>
+                    <div class="col-md-6">
+                         <h3> เบอร์ติดต่อร้าน</h3>
+                        <input type="text" class="form-control" id="beautytel" name="beautytel" value="{{ this.phone }}" readonly>
+                    </div>
+                     <div class="col-md-6">
+                         <h3> อีเมล์ร้าน</h3>
+                        <input type="text" class="form-control" id="beautyemail" name="beautyemail" value="{{ this.email }}" readonly>
+                    </div>
+                    <div class="col-md-6">
+                         <h3> เบอร์ติดต่อกลับ</h3>
+                        <input type="text" class="form-control" id="custel" name="custel"  placeholder="6691234567" required>
+                    </div>
+                </div>
+                 
+                 <div class="col-md-12">
+                <div class="form-group">
+                    <h3> ลักษณะที่ต้องการใช้บริการ</h3> 
+                    <textarea class="form-control" id="msg_data" name="msg_data" rows="5" style="resize: none;" placeholder="อธิบายที่ต้องการใช้บริการ" required></textarea>
+                </div>
+                  </div>
+
+                   <div class="col-md-6">
+                                            <h3> ประเภทการใช้บริการ</h3>
+                                            <select class="form-control" id="type" name="type" >
+                                              <option value="ตัดผม"> ตัดผม</option>
+                                              <option value="ทำเล็บ">ทำเล็บ</option>
+                                              <option value="ดัด ยืดผม">ดัด ยืดผม</option> 
+                                               <option value="สระผม">สระ ไดร์ผม</option> 
+                                                <option value="ทำสีผม">ทำสีผม</option>                                              
+                                            </select>
+                                          </div> 
+                
+                 <div class="col-md-6">
+                       <h3> สถานะการจอง</h3> 
+                <div align="center">
+                           
+                 <input type="text" name="wait" id="wait" value="waiting" class="form-control" readonly>
+                                          </div>
+                 </div>  <div class="col-md-6">
+                                            <h3> เวลาที่ต้องการใช้บริการ</h3>
+                                            <select class="form-control" id="time" name="time" >
+                                              <option value="08.00 am">08.00 am</option>
+                                              <option value="09.00 am">09.00 am</option>
+                                              <option value="10.00 am">10.00 am</option>
+                                              <option value="11.00 am">11.00 am</option>
+                                              <option value="12.00 am">12.00 am</option>
+                                              <option value="13.00 am">13.00 am</option>                                             
+                                            </select>
+                                          </div>
+                
+                  
+               
+              
+                <div align="center">
+                    <input type="submit" class="btn btn-primary" value="จองคิวร้าน">
+                </div>
+            </form>
+      </div>       
+
+               
+{{/each}}             
+            </div>
+        </div>
+    </div>
+    </div> 
+    <br><br>
+  <div class="container">
+    <div class="row">
+    </div></div> {{> addJS}}
+    {{> addJS}}
+     <div class="footer">
+        <!-- footer-->
+        <div class="container">
+            <div class="footer-block">
+                <!-- footer block -->
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="footer-widget">
+                            <h2 class="widget-title">Website Address</h2>
+                            <ul class="listnone contact">
+                                <li><i class="fa fa-map-marker"></i> Software Engineering, Prince of Songkhla University, Phuket campus                        
+                          </li>
+                                <li><i class="fa fa-phone"></i> +66 987 383 640</li>
+                                <li><i class="fa fa-fax"></i> +66 987 383 640</li>
+                                <li><i class="fa fa-envelope-o"></i> benzsirasit1203@hotmail.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="footer-widget footer-social">
+                            <!-- social block -->
+                            <h2 class="widget-title">Social Feed</h2>
+                            <ul class="listnone">
+                                <li>
+                                    <a href="#"> <i class="fa fa-facebook"></i> Facebook </a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i> Google Plus</a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i> Linked In</a></li>
+                                <li>
+                                    <a href="#"> <i class="fa fa-youtube"></i>Youtube</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.social block -->
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                        <div class="footer-widget widget-newsletter">
+                            <!-- newsletter block -->
+                            <h2 class="widget-title">Newsletters</h2>
+                            <p>Enter your email address to receive new patient information and other useful information right to your inbox.</p>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Email Address">
+                                <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Subscribe</button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </div>
+                        <!-- newsletter block -->
+                    </div>
+                </div>
+                <div class="tiny-footer">
+                    <!-- tiny footer block -->
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="copyright-content">
+                                <p>© Men Salon 2020 | all rights reserved</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.tiny footer block -->
+            </div>
+            <!-- /.footer block -->
+        </div>
+    </div>
+   
+</body>
+</html>
